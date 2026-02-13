@@ -7,7 +7,7 @@
 }
 
 :root {
-  --dark-color: #000;
+  --dark-color: #186447;
 }
 
 body {
@@ -31,7 +31,7 @@ body {
   filter: blur(0.1vmin);
   background-image:
   /* затемнение, без него картинка становится очень светлой */
-    radial-gradient(ellipse at top, transparent 0%, var(--dark-color)),
+    /* radial-gradient(ellipse at top, transparent 0%, var(--dark-color)), */
     /* подсветка сверху */
     radial-gradient(
       ellipse at bottom,
@@ -588,7 +588,7 @@ body {
   right: 0%;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  /* background-color: rgba(0, 0, 0, 0.6); */
   filter: blur(1.5vmin);
   z-index: 100;
 }
