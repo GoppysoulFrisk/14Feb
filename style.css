@@ -936,15 +936,16 @@ body {
 }
 .long-g--1 {
   bottom: 0vmin;
+  left: -55vmin;
   transform: scale(0.8) rotate(-5deg);
 }
-/* .long-g--1 .leaf {
+.long-g--1 .leaf {
   -webkit-mask-image: linear-gradient(
     to top,
     transparent 40%,
     #079097 80%
   ) !important;
-} */
+}
 .long-g--1 .leaf--1 {
   --w: 5vmin;
   --h: 60vmin;
@@ -953,8 +954,10 @@ body {
 }
 .long-g--2,
 .long-g--3 {
-  left: -40vmin;
-  transform: scale(0.8) rotateX(50deg);
+  bottom: -3vmin;
+  left: -35vmin;
+  transform-origin: center;
+  transform: scale(0.6) rotateX(60deg);
 }
 .long-g--2 .leaf,
 .long-g--3 .leaf {
@@ -1019,6 +1022,12 @@ body {
 }
 .long-g--9 {
   left: 70vmin;
+  bottom: 0vmin;
+  transform-origin: center;
+  transform: scale(0.6) rotateX(60deg);
+}
+.long-g--10 {
+  left: -70vmin;
   bottom: 0vmin;
   transform-origin: center;
   transform: scale(0.6) rotateX(60deg);
@@ -1210,4 +1219,48 @@ body {
   animation-play-state: paused !important;
 }
 
+.message {
+  position: absolute;
+  z-index: 300; /* Поверх всех элементов */
+  top: 6%; /* Расстояние от верха страницы */
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  color: #ca6378;
+  opacity: 0; /* Убедимся, что элемент виден */
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 2.4s;
+  font-family: 'Arial', sans-serif
+}
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.firefly {
+  position: fixed; /* Чтобы занимали всю страницу и не перекрывали текст */
+  z-index: 0; /* Перемещаем на задний план */
+  width: 8px;
+  height: 8px;
+  background: yellow;
+  border-radius: 50%;
+  box-shadow: 0 0 8px yellow;
+  animation: blink 3s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
