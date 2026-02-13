@@ -931,20 +931,20 @@ body {
 .long-g {
   position: absolute;
   bottom: 25vmin;
-  left: -42vmin;
+  left: -65vmin;
   transform-origin: bottom left;
 }
 .long-g--1 {
   bottom: 0vmin;
   transform: scale(0.8) rotate(-5deg);
 }
-.long-g--1 .leaf {
+/* .long-g--1 .leaf {
   -webkit-mask-image: linear-gradient(
     to top,
     transparent 40%,
     #079097 80%
   ) !important;
-}
+} */
 .long-g--1 .leaf--1 {
   --w: 5vmin;
   --h: 60vmin;
@@ -953,10 +953,8 @@ body {
 }
 .long-g--2,
 .long-g--3 {
-  bottom: -3vmin;
-  left: -35vmin;
-  transform-origin: center;
-  transform: scale(0.6) rotateX(60deg);
+  left: -40vmin;
+  transform: scale(0.8) rotateX(50deg);
 }
 .long-g--2 .leaf,
 .long-g--3 .leaf {
@@ -1013,7 +1011,17 @@ body {
   z-index: -1;
   filter: blur(0.3vmin);
   transform: scale(0.6) rotate(2deg);
-  opacity: 0.7;
+  opacity: 0.2;
+}
+.long-g--8 {
+  left: 80vmin;
+  bottom: 10vmin;
+}
+.long-g--9 {
+  left: 70vmin;
+  bottom: 0vmin;
+  transform-origin: center;
+  transform: scale(0.6) rotateX(60deg);
 }
 .long-g .leaf {
   --w: 15vmin;
@@ -1201,3 +1209,5 @@ body {
 .not-loaded * {
   animation-play-state: paused !important;
 }
+
+
